@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="discription" content="Описание сайта">
+	<meta name="keywords" content="Ключевые слова">
+	<title>Document <!--<?$APPLICATION->ShowTitle()?>--></title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.arcticmodal-0.3.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+	<!--Скрипт для подключения яндекс карты-->
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/script.js"></script>
+
+<!-- Предзагрузка для страницы -->
+	<!-- <style>
+		#page-preloader{position:fixed;left:0;top:0;right:0;bottom:0;background:#000 url(../images/logo.gif) no-repeat center;z-index:10000;}
+		#page-preloader .spinner{width:32px;height:32px;position:absolute;left:50%;top:65%;margin:10px 0 0 -16px;}
+	</style>
+	<script>
+		/*preloader*/
+		$(window).on('load', function () {
+		    var $preloader = $('#page-preloader'),
+		        $spinner   = $preloader.find('.spinner');
+		        $spinner.fadeOut();
+		        $preloader.delay(350).fadeOut(400);
+		});
+		/**/
+	</script> -->
+<!-- конец предзагрузки -->
+
+	<!--[if lt IE 7]>
+		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 8]>
+		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<!-- <?$APPLICATION->ShowHead()?> -->
+</head>
+<body>
+<div id="panel"><!-- <?$APPLICATION->ShowPanel();?> --></div>
+	<div class="wrp">
+		<header class="main-header">
+				<div class="top-header">
+					<div class="g-row">
+							<ul class="ul-top-header list">
+								<li>
+									<p><img src="i/ico-top-header.png" alt="" /> Высокое качество</p>
+								</li>
+								<li>
+									<p><img src="i/ico-top-header.png" alt="" /> Индивидуальный пошив</p>
+								</li>
+								<li>
+									<p><img src="i/ico-top-header.png" alt="" /> Элегантные ткани</p>
+								</li>
+								<li>
+									<p><img src="i/ico-top-header.png" alt="" /> Работа на дому</p>
+								</li>
+							</ul>
+					</div>
+				</div>
+
+				<div class="center-header">
+					<div class="g-row">
+						<div class="phone fleft">
+							<div class="b-vert">
+								<p><img src="i/phone-i.png" alt="Телефон"><a href="#">8 (7172) 50-97-92</a></p>
+							</div>
+						</div>
+
+						<div class="logo fleft">
+							<div class="b-vert">
+							<a href="#"><img src="i/logo.png" alt="Свадебный Альянс"></a>
+							</div>
+						</div>
+
+						<div class="adres fleft">
+							<div class="b-vert">
+								<p><img src="i/h-placemark-i.png"  alt="ул. Московская 18"> ул. Московская 18</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bottom-header">
+					<div class="g-row">
+						<ul class="bx-slider list">
+							<li>
+								<img src="i/slider.jpg"  alt="">
+								<div class="slider-caption">
+									<div class="b-vert">
+										<p>Новая коллекция зима-весна ‘16</p>
+										<h1>Снежная королева</h1>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</header>
+
+		<main>
+			<section class="wedding">
+				<div class="g-row">
+					<h2>Свадебные платья</h2>
+					<ul class="bx-wedding list">
+						<li>
+							<img src="i/wedding-1.jpg" alt="">
+							<div class="bx-wedding-caption">
+								<div class="b-vert">
+									<h3>Jordan</h3>
+									<p><span>Шифон, кружева</span></p>
+									<p class="price">250 000 тенге</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<img src="i/wedding-2.jpg" alt="">
+							<div class="bx-wedding-caption">
+								<div class="b-vert">
+									<h3>Jordan</h3>
+									<p><span>Шифон, кружева</span></p>
+									<p class="price">250 000 тенге</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<img src="i/wedding-3.jpg" alt="">
+							<div class="bx-wedding-caption">
+								<div class="b-vert">
+									<h3>Jordan</h3>
+									<p><span>Шифон, кружева</span></p>
+									<p class="price">250 000 тенге</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<img src="i/wedding-4.jpg" alt="">
+							<div class="bx-wedding-caption">
+								<div class="b-vert">
+									<h3>Jordan</h3>
+									<p><span>Шифон, кружева</span></p>
+									<p class="price">250 000 тенге</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<a href="#" class="btm">Показать еще 8 моделей</a>
+				</div>
+			</section>
+
+			<section class="procat">
+				<div class="g-row">
+				<img src="i/procat.jpg"  alt="Прокат платьев">
+				</div>
+			</section>
+
+			<section class="night">
+				<div class="g-row">
+					<h2>Вечерние платья</h2>
+					<ul class="bx-night list">
+						<li>
+							<img src="i/night-1.jpg" alt="">
+							<div class="bx-night-caption">
+								<div class="b-vert">
+									<h3>Jordan</h3>
+									<p><span>Шифон, кружева</span></p>
+									<p class="price">250 000 тенге</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<img src="i/night-2.jpg" alt="">
+							<div class="bx-night-caption">
+								<div class="b-vert">
+									<h3>Jordan</h3>
+									<p><span>Шифон, кружева</span></p>
+									<p class="price">250 000 тенге</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<img src="i/night-3.jpg" alt="">
+							<div class="bx-night-caption">
+								<div class="b-vert">
+									<h3>Jordan</h3>
+									<p><span>Шифон, кружева</span></p>
+									<p class="price">250 000 тенге</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<img src="i/night-4.jpg" alt="">
+							<div class="bx-night-caption">
+								<div class="b-vert">
+									<h3>Jordan</h3>
+									<p><span>Шифон, кружева</span></p>
+									<p class="price">250 000 тенге</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<a href="#" class="btm">Показать еще 8 моделей</a>
+				</div>
+			</section>
+
+			<section class="services">
+				<div class="g-row">
+					<div class="services-left fleft">
+						<h2>15 лет с Вами</h2>
+						<p><span>За&nbsp;это время мы&nbsp;внесли<br />
+						в&nbsp;наш салон много нового<br />
+						и&nbsp;интересного.</span></p>
+					</div>
+
+					<div class="services-right fright">
+						<ul class="bxservices list">
+							<li class="services-right-items">	
+								<div class="services-right-items-img">
+									<img src="i/ico-services.png"  alt="Свадебные наряды"> 
+								</div>
+								<div class="services-right-items-txt">
+									<div class="b-vert">
+										<a href="#">Свадебные<br>наряды</a>
+									</div>
+								</div>
+							</li>
+							<li class="services-right-items">
+								<div class="services-right-items-img">
+									<img src="i/ico-services.png"  alt="Вечерние наряды"> 
+								</div>
+								<div class="services-right-items-txt">
+									<div class="b-vert">
+										<a href="#">Вечерние<br>наряды</a>
+									</div>
+								</div>
+							</li>
+							<li class="services-right-items">
+								<div class="services-right-items-img">
+									<img src="i/ico-services.png"  alt="Детские наряды"> 
+								</div>
+								<div class="services-right-items-txt">
+									<div class="b-vert">
+										<a href="#">Детские<br>наряды</a>
+									</div>
+								</div>
+							</li>
+							<li class="services-right-items">
+								<div class="services-right-items-img">
+									<img src="i/ico-services.png"  alt="Оформление зала"> 
+								</div>
+								<div class="services-right-items-txt">
+									<div class="b-vert">
+										<a href="#">Оформление<br>зала</a>
+									</div>
+								</div>
+							</li>
+							<li class="services-right-items">
+								<div class="services-right-items-img">
+									<img src="i/ico-services.png"  alt="Оформление машин"> 
+								</div>
+								<div class="services-right-items-txt">
+									<div class="b-vert">
+										<a href="#">Оформление <br>машин</a>
+									</div>
+								</div>
+							</li>
+							<li class="services-right-items">
+								<div class="services-right-items-img">
+									<img src="i/ico-services.png"  alt="Оформление бокалов и т.д."> 
+								</div>
+								<div class="services-right-items-txt">
+									<div class="b-vert">
+										<a href="#">Оформление<br>бокалов и т.д.</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<h3>Ткань из Италии</h3>
+						<p>При пошиве наряда используются элегантные ткани, потрясающий гипюр ифурнитура на&nbsp;загляденье.<br />
+						Это Атлас, Атлас Дюпон, Белинда, Буфляция, Джорно, Виолетта, Дельта, Жан Жан, Мультишифон,<br />
+						Кристалон, Фатин, Тафта.</p>
+						
+						<h3>Гипюр и кружева из Франции </h3>
+						<p>Гипюр и&nbsp;кружева высочайшего качества c&nbsp;изумительными выбитыми рисунками. Макраме<br />
+						с&nbsp;роскошной вышивкой и&nbsp;цветами. Это Гипюр Корд, Шантильи Корд, Франки, Шантильи и&nbsp;Макраме<br />
+						Лонгвиль. Камни Сваровски, расшитые французские пояса, пояса из&nbsp;камней Сваровски, жемчуг,<br />
+						стеклярус и&nbsp;многое другое для того, чтобы наряд был сказочно красив.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="gallery">
+				<div class="g-row">
+					<ul class="bxinst list">
+						<li>
+							<div class="b-vert">
+								<p class="inst"><img src="i/inst-i.png" alt="альянс в инстаграме"> @wedding_alliance</p>
+								<h3>Свадебный альянс <br>в instagram</h3>
+								<p>Жизнь нашего салона,<br />
+								наши обворожительные,<br />
+								вечерние платья,<br />
+								торжества</p>
+							</div>
+						</li>
+						<li>
+							<a href="#"><img src="i/gallery-1.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="i/gallery-2.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="i/gallery-3.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="i/gallery-4.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="i/gallery-5.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="i/gallery-6.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="i/gallery-7.jpg" alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="reviews">
+				<div class="g-row">
+					<h2>Отзывы</h2>
+					<div class="review-items">
+						<img src="i/kov.png"  alt="">
+						<p>&laquo;Спасибо огромное сотрудникам салона Свадебный Альянс<br />
+						за&nbsp;прекрасно подобранное платье! Идеальный вариант для моей свадьбы!!!<br />
+						спасибо за&nbsp;профессионализм и&nbsp;художественное видение!&raquo;</p>
+						<p><span>Юлия Никитина</span></p>
+					</div>
+
+					<div class="socnet">
+						<img src="i/socnet.png" height="20" width="537" alt="">
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="main-footer">
+			<div id="map">
+				<a href="#" class="popap_box" data-body="call-me">Нажми</a>
+
+			</div>
+
+			<div class="bottom-footer">
+				<div class="g-row">
+				<div class="bottom-footer-left fleft">
+					<p>&copy; 2015. Свадебный альянс.</p>
+				</div>
+				<div class="bottom-footer-center fleft"></div>
+				<div class="bottom-footer-right fright">
+					<p>Cледите за нами: <a href="#"><img src="i/vk.png" alt=""></a><a href="#"><img src="i/fb.png" alt=""></a><a href="#"><img src="i/ins.png" alt=""></a></p>
+				</div>
+				</div>
+			</div>
+		</footer>
+		
+	</div>
+<div class="g-hidden">
+	<div id="modalbox_call-me" class="b-modal">
+
+	</div>
+</div>
+</body>
+</html>
