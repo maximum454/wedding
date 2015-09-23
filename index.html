@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="discription" content="Описание сайта">
-	<meta name="keywords" content="Ключевые слова">
-	<title>Document <!--<?$APPLICATION->ShowTitle()?>--></title>
+	<meta name="discription" content="Свадебныйе платья">
+	<meta name="keywords" content="платья, ткань, пошив, прокат">
+	<title>Свадебный Альянс</title>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/jquery.arcticmodal-0.3.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
 	<!--Скрипт для подключения яндекс карты-->
-	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/jquery.arcticmodal-0.3.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/script.js"></script>
 
 <!-- Предзагрузка для страницы -->
-	<!-- <style>
-		#page-preloader{position:fixed;left:0;top:0;right:0;bottom:0;background:#000 url(../images/logo.gif) no-repeat center;z-index:10000;}
+	<style>
+		#page-preloader{position:fixed;left:0;top:0;right:0;bottom:0;background:#f9f7f7 url(i/logo.png) no-repeat center;z-index:10000;}
 		#page-preloader .spinner{width:32px;height:32px;position:absolute;left:50%;top:65%;margin:10px 0 0 -16px;}
 	</style>
 	<script>
@@ -30,7 +30,7 @@
 		        $preloader.delay(350).fadeOut(400);
 		});
 		/**/
-	</script> -->
+	</script>
 <!-- конец предзагрузки -->
 
 	<!--[if lt IE 7]>
@@ -46,10 +46,36 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-<!-- <?$APPLICATION->ShowHead()?> -->
 </head>
 <body>
-<div id="panel"><!-- <?$APPLICATION->ShowPanel();?> --></div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter29161530 = new Ya.Metrika({id:29161530,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/29161530" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<div id="page-preloader" ><div class="spinner"></div></div>
 	<div class="wrp">
 		<header class="main-header">
 				<div class="top-header">
@@ -75,7 +101,14 @@
 					<div class="g-row">
 						<div class="phone fleft">
 							<div class="b-vert">
-								<p><img src="i/phone-i.png" alt="Телефон"><a href="#">8 (7172) 50-97-92</a></p>
+								<ul class="ulphone list">
+									<li><a href="">8 (7172) 50-97-92</a>
+										<ul>
+											<li><a href="">8 (707) 841 60 05</a></li>
+										</ul>
+									</li>
+								</ul>
+								
 							</div>
 						</div>
 
@@ -105,8 +138,30 @@
 									</div>
 								</div>
 							</li>
+							<li>
+								<img src="i/slider.jpg"  alt="">
+								<div class="slider-caption">
+									<div class="b-vert">
+										<p>Новая коллекция зима-весна ‘16</p>
+										<h1>Снежная королева</h1>
+									</div>
+								</div>
+							</li>
 						</ul>
 					</div>
+				</div>
+
+				<div class="l-l">
+					<div class="l-1 parallax"></div>
+					<div class="l-2 parallax"></div>
+					<div class="l-3 parallax"></div>
+					<div class="l-4 parallax"></div>
+				</div>
+				<div class="r-l">
+					<div class="r-1 parallax"></div>
+					<div class="r-2 parallax"></div>
+					<div class="r-3 parallax"></div>
+					<div class="r-4 parallax"></div>
 				</div>
 		</header>
 
@@ -352,7 +407,30 @@
 					</div>
 
 					<div class="socnet">
-						<img src="i/socnet.png" height="20" width="537" alt="">
+						<div class="vk">
+							<!-- Put this script tag to the <head> of your page -->
+							<script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>
+
+							<script type="text/javascript">
+							  VK.init({apiId: 5080363, onlyWidgets: true});
+							</script>
+
+							<!-- Put this div tag to the place, where the Like block will be -->
+							<div id="vk_like"></div>
+							<script type="text/javascript">
+							VK.Widgets.Like("vk_like", {type: "mini"});
+							</script>
+						</div>
+
+						<div class="fb">
+							<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 					</div>
 				</div>
 			</section>
@@ -360,8 +438,17 @@
 
 		<footer class="main-footer">
 			<div id="map">
-				<a href="#" class="popap_box" data-body="call-me">Нажми</a>
-
+				<a href="#" class="btm btm-con">Посмотреть контакты</a>
+					<div class="map-inner">	
+							<div class="b-vert">	
+								<p><img src="i/placemark.png" alt=""></p>
+								<p><a href="#" class="btm-map">Посмотреть карту</a></p>
+								<h2>+ 7172 50-97-92</h2>
+								<p>Астана, ул.&nbsp;Московская, 18<br />
+								<a href="mailto:info@alliance-style.kz">info@<nobr>alliance-style</nobr>.kz</a></p>
+								<a href="#" class="popap_box btm" data-body="call-me"><img src="i/phone-f.png" alt="Позвоните мне">Позвоните мне</a>
+							</div>
+					</div>		
 			</div>
 
 			<div class="bottom-footer">
@@ -380,7 +467,15 @@
 	</div>
 <div class="g-hidden">
 	<div id="modalbox_call-me" class="b-modal">
-
+		<div class="form">
+			<h2>Позвоните нам</h2>
+			<input id="name" type="text" placeholder="Ваше имя">
+			<input id="phone" type="text" placeholder="+7 (___) ___ __ __">
+			<a href="#" class="btm" onclick="send();"><img src="i/phone-f.png" alt="Позвоните мне">Отправить</a>
+		</div>
+		<div id="result">
+			<div class="result-text"></div>
+		</div>
 	</div>
 </div>
 </body>

@@ -180,9 +180,22 @@ html,body{margin: 0;padding: 0;height: 100%;}
 .g-hidden{display: none;}
 .g-row{width: 960px;padding:0 20px;margin: 0 auto;}
 .b-vert{display: table-cell;width: inherit;height: inherit;position: relative;vertical-align: middle;}
-.wrp{width: 1160px; margin: 0 auto;}
-a{ color: #471a4a;text-decoration: none;border-bottom: 1px dotted; font:normal 18px/24px 'PFAgoraSerifPro-Italic';;}
+.wrp{width: 1160px; margin: 0 auto; position:relative;}
+a{ color: #471a4a;text-decoration: none;border-bottom: 1px dotted; font:normal 18px/24px 'PFAgoraSerifPro-Italic';}
 
+
+.main-header{margin-bottom: 40px;position: relative;}
+.l-l{position: absolute;left: 0; top: 150px;}
+.l-l .l-1{background: url(../i/l-1.png) no-repeat;width: 125px;height: 100px;position: absolute;left: 95px;top: 0px;}
+.l-l .l-2{background: url(../i/l-2.png) no-repeat;width: 130px;height: 141px;position: absolute;left: 30px;top: 100px;}
+.l-l .l-3{background: url(../i/l-3.png) no-repeat;width: 72px;height: 71px;position: absolute;left: 155px;top: 315px;}
+.l-l .l-4{background: url(../i/l-4.png) no-repeat;width: 99px;height: 104px;position: absolute;left: 30px;top: 400px;}
+
+.r-l{position: absolute;right: 0; top: 150px;}
+.r-l .r-1{background: url(../i/r-1.png) no-repeat;width: 150px;height: 128px;position: absolute;right:30px; top: -45px;}
+.r-l .r-2{background: url(../i/r-2.png) no-repeat;width: 93px;height: 69px;position: absolute;right: 155px;top: 100px;}
+.r-l .r-3{background: url(../i/r-3.png) no-repeat;width: 89px;height: 89px;position: absolute;right: 155px;top: 315px;}
+.r-l .r-4{background: url(../i/r-4.png) no-repeat;width: 137px;height: 137px;position: absolute;right: 30px;top: 400px;}
 /*top-header*/
 .top-header{width: 100%; height: 50px;background: #f1f0f0;overflow: hidden;}
 .ul-top-header{position: relative;height: inherit; margin-top: 8px;}
@@ -190,7 +203,9 @@ a{ color: #471a4a;text-decoration: none;border-bottom: 1px dotted; font:normal 1
 .ul-top-header li{float: left; margin-right: 70px; vertical-align: middle;}
 .ul-top-header li:last-child{margin-right: 0;}
 .ul-top-header p{margin: 0; color: #565a5c; font:normal 16px/30px 'PFAgoraSerifPro-Italic';}
-.ul-top-header li img{margin-right: 10px;}
+.ul-top-header li img{margin-right: 10px;margin-bottom: 10px;}
+.locked{position: fixed;top: 0;z-index: 1;left: 0;-webkit-transition:.4s;-moz-transition:.4s;transition:.4s;}
+.locked img{margin-bottom: 0;}
 /**/
 
 /*center-header*/
@@ -201,9 +216,16 @@ a{ color: #471a4a;text-decoration: none;border-bottom: 1px dotted; font:normal 1
 .center-header a{ color: #be4570; font:normal 16px/30px 'PFAgoraSerifPro-Italic'; text-decoration: none;border-bottom: 1px dotted;}
 .center-header .logo{margin:0px 200px; height: 100px;}
 .center-header .logo a{border-bottom: 0;}
-.center-header .logo img{margin-right: 0;}
+.center-header .logo img{margin-right: 0;margin-bottom: 0;}
 .center-header .phone{height: 100px;}
+.center-header .phone img{margin-bottom: 0;}
+.ulphone{  position: relative;    margin-left: 35px;}
+.ulphone:before{content: '';background: url(../i/phone-i.png) no-repeat; position: absolute;left: -35px;top: 3px;width: 24px;height: 24px;}
+.ulphone:after{content: '';background: url(../i/arrow-bottom.png) no-repeat; position: absolute;right: -20px;top: 12px;width: 8px;height: 4px;}
+.ulphone li>ul{display: none; position: absolute;}
+.ulphone li:hover ul{display: block;} 
 .center-header .adres{height: 100px;}
+.center-header .adres img{margin-bottom: 0;}
 /**/
 
 /*bottom-header*/
@@ -284,6 +306,7 @@ a{ color: #471a4a;text-decoration: none;border-bottom: 1px dotted; font:normal 1
 .bxinst li{float: left;width: 240px;height: 240px; background: #f9ded8;}
 .bxinst li:first-child{padding-left: 30px;width: 210px;}
 .bxinst li .inst{ color:#be4570;font:normal 15px/30px 'PFAgoraSerifPro-Italic';}
+.inst img{margin-bottom: 0;}
 .bxinst li p img{margin-right: 10px;}
 .bxinst li h3{color: #471a4a; font:normal 22px/30px 'PFAgoraSerifPro-Italic';margin: 10px 0;}
 .bxinst li p{color: #333; font:normal 15px/22px 'PFAgoraSerifPro-Italic';margin: 0;}
@@ -300,7 +323,35 @@ a{ color: #471a4a;text-decoration: none;border-bottom: 1px dotted; font:normal 1
 /**/
 
 /*footer*/
-#map{width: 100%;height: 480px; position: relative;overflow: hidden;}
+#map{width: 1160px;height: 480px; position: relative;overflow: hidden;}
+.btm-con{display: none; position: absolute;top: 20px; left: 50%;margin-left: -120px;z-index: 1;}
+.map-inner{width: inherit;height: inherit;background: rgba(255,255,255,.6); position: absolute;top:0; left: 0;z-index: 1;text-align: center;}
+.map-inner h2{color: #471a4a; font:normal 36px/54px 'PFAgoraSerifPro-BItalic';text-transform: uppercase; margin: 0 0 25px; text-align: center;}
+.map-inner p{color: #565a5c; font:normal 18px/24px 'PFAgoraSerifPro-Italic';margin:10px 0;}
+.map-inner p a{border-bottom: 1px solid #e6b5b1; color: #be4570;}
+.map-inner .btm{
+	width: 213px;
+	height: 50px;
+	margin-top: 40px;
+	line-height: 50px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+.map-inner .btm img{margin-right: 15px;margin-bottom: 0;}
 .bottom-footer{width: 100%;height: 60px; background:#222325;overflow: hidden;}
 .bottom-footer p{color: #989898; font:normal 15px/22px 'PFAgoraSerifPro-Italic';margin:20px 0 0;}
+.bottom-footer-right img{margin-bottom: 0;margin-left: 15px;}
+.bottom-footer-right a:hover{opacity: .6;}
+/**/
+
+/**/
+.form{background:#f9f7f7;padding: 20px;width: 400px;position: relative;}
+.form h2{color: #471a4a; font:normal 30px/54px 'PFAgoraSerifPro-BItalic';text-transform: uppercase; margin: 0 0 25px; text-align: center;}
+.form input{ width: 320px;height: 40px;color: #565a5c; font:normal 18px/40px 'PFAgoraSerifPro-Italic'; padding-left: 20px;margin: 10px auto;display: block;}
+.form .btm{font:normal 18px/55px 'PFAgoraSerifPro-Italic';width: 213px; height: 50px;font:normal 18px/50px 'PFAgoraSerifPro-Italic';}
+.form .btm img{margin-right: 15px;margin-bottom: 0;}
+
+#result{background:#f9f7f7;padding: 20px;width: 400px;position: relative;}
+.result-text{ color:#471a4a;font:normal 18px/55px 'PFAgoraSerifPro-Italic';}
 /**/

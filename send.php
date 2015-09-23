@@ -1,30 +1,22 @@
 <?
 $name = trim(htmlspecialchars($_POST["name"]));
 $phone = trim(htmlspecialchars($_POST["phone"]));
-$ch = $_POST["checkbox"];
-$s=0;
-foreach($ch as $value):
-$s++;	
-	$v.="$s - $value <br>";
-endforeach;
-
 if((!empty($name)) and (!empty($phone))){
 
 	// формируем заголовок и тело письма
  $headers  = "Content-type: text/html; charset=utf-8 \r\n"; 
- $headers .= "From: $name <$phone@phonenumber.com>\r\n"; 
+ $headers .= "From: $name <alliance-style>\r\n"; 
  $thm = "Сообщение";
- $msg= "  
+ $msg= "  <h1>Позвоните мне</h1>
 		  <strong>Имя:</strong> $name <br />
 		  <strong>Телефон:</strong> $phone<br />
-			<strong>$v</strong>
 		  ";
-$mail_to  = 'Ваша почта';
+$mail_to  = 'maximum454@gmail.com';
  // Отправляем почтовое сообщение
  if(empty($picture)) mail($mail_to, $thm, $msg, $headers);
  echo "<div class='succes'>Спасибо! Ваша заявка принята</div>";
 }else{
-echo "<div class='error' style='color:red;'>Заполните все поля!</div>";
+echo "<div class='error'>Заполните все поля!</div>";
 }
 
 ?>
